@@ -1,32 +1,30 @@
 #include <stdio.h>
 
 // Function prototype
-int binary_search(int array[], int length, int target);
+int binary_search(const int array[], int length, int target);
 
-int main()
+int main(void)
 {
-    int data[] = {1, 2, 5, 6, 8, 11};
-    int length = sizeof(data) / sizeof(data[0]);
+    int array[] = {1, 2, 0, 6, 8, 11};
+    size_t length = sizeof(array) / sizeof(array[0]);
     int target = 5;
 
-    int result = binary_search(data, length, target);
+    int index = binary_search(array, length, target);
 
-    if (result == 1)
+    if (index != -1)
     {
-        printf("%d\n", result);
-        printf("Target found.");
+        printf("Target %d found at index %d.\n", target, index);
     }
     else
     {
-        printf("%d\n", result);
-        printf("Target not found.");
+        printf("Target %d not found.\n", target);
     }
 
     return 0;
 }
 
 // Function definition
-int binary_search(int array[], int length, int target)
+int binary_search(const int array[], int length, int target)
 {
     int left = 0;
     // last index = 5
@@ -44,7 +42,7 @@ int binary_search(int array[], int length, int target)
 
         if (array[middle] == target)
         {
-            return 1;
+            return middle;
         }
         else if (array[middle] < target)
         {
@@ -52,6 +50,7 @@ int binary_search(int array[], int length, int target)
         }
         else
         {
+            if (middle == 0) break;
             right = middle - 1;
         }
     }
