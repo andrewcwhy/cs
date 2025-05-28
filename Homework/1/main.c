@@ -4,17 +4,17 @@
 #define MAX_NAME_LENGTH 20
 #define MAX_STUDENTS 100
 
-typedef struct
+typedef struct Student
 {
     int id;
+    float gpa;
     char first_name[MAX_NAME_LENGTH + 1];
     char last_name[MAX_NAME_LENGTH + 1];
-    float gpa;
-} Student;
+} student_t;
 
 void get_filename(const char *filename);
 int read_file(const char *filename);
-void print_student_info(const Student *s);
+void display_student_info(student_t student);
 
 int main()
 {
@@ -52,10 +52,10 @@ int read_file(const char *filename)
     fclose(file);
 }
 
-void print_student_info(const Student *s)
+void display_student_info(student_t student)
 {
-    printf("Student Information:\n");
-    printf("ID: %d\n", s->id);
-    printf("Name: %s %s\n", s->first_name, s->last_name);
-    printf("GPA: %.2f\n", s->gpa);
+    printf("-----Student Information-----\n");
+    printf("ID: %d\n", student->id);
+    printf("Full Name: %s %s\n", student->first_name, student->last_name);
+    printf("GPA: %.2f\n", student->gpa);
 }

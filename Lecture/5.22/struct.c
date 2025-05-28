@@ -3,23 +3,24 @@
 #define MAX_NID_LENGTH 8
 #define MAX_NAME_LENGTH 32
 
-typedef struct Student
+struct Student
 {
     char NID[MAX_NID_LENGTH + 1];
-    char sex;
-    float gpa;
     char first_name[MAX_NAME_LENGTH + 1];
     char last_name[MAX_NAME_LENGTH + 1];
-} student_t;
+    char sex;
+    float GPA;
+};
 
-void display_student_info(student_t student);
+void print_student(struct Student student);
 
-int main()
+int main(void)
 {
-    student_t students[2];
+    struct Student students[3];
 
-    students[0] = (student_t){"an570531", "Andrew", "Young", 'm', 3.2};
-    students[1] = (student_t){"an570532", "Briana", "Young", 'f', 3.2};
+    students[0] = (struct Student){"an570531", "Andrew", "Young", 'm', 3.2};
+    students[1] = (struct Student){"an570532", "Briana", "Young", 'f', 3.2};
+    students[2] = (struct Student){"an570533", "Rosana", "Young", 'f', 3.2};
 
     int count = sizeof(students) / sizeof(students[0]);
 
@@ -31,10 +32,10 @@ int main()
     return 0;
 }
 
-void print_student(student_t student)
+void print_student(struct Student student)
 {
     printf("-----Student %s-----\n", student.NID);
     printf("Full Name: %s %s\n", student.first_name, student.last_name);
     printf("Sex: %c\n", student.sex);
-    printf("GPA: %.2f\n", student.gpa);
+    printf("GPA: %.2f\n", student.GPA);
 }
