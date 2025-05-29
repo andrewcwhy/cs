@@ -1,0 +1,11 @@
+{
+  "clean": {
+    "targets": [
+      "**/node_modules",
+      "**/*.pdb",
+      "**/*.exe.obj",
+      ".moon/cache",
+      "bun.lock"
+    ]
+  }
+}

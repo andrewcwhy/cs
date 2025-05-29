@@ -1,7 +1,6 @@
 const std = @import("std");
 const print = std.debug.print;
 
-
 pub fn main() !void {
     const val = 10;
     const result = sqr(val);

@@ -7,10 +7,22 @@ int main()
     int array[] = {10, 6, 4, 5, 20};
     size_t length = sizeof(array) / sizeof(array[0]);
 
-    int target = 5;
+    int target = 0;
 
-    int counted = find_multiples(array, 0, length - 1, target);
-    printf("There are %d multiple(s) of %d.\n", counted, target);
+    if (target == 0) {
+        printf("Target cannot be zero.\n");
+        return 1;
+    }
+
+    int matched = find_multiples(array, 0, length - 1, target);
+    if (matched > 0)
+    {
+        printf("There are %d multiple(s) of %d.\n", matched, target);
+    }
+    else
+    {
+        printf("There are no multiples of %d.\n", target);
+    }
 
     return 0;
 }
@@ -21,7 +33,7 @@ int find_multiples(const int array[], int start, int end, int target)
 
     if (array[start] % target == 0)
     {
-      count++;  
+        count++;
     }
 
     if (start == end)

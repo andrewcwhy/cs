@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Function declaration
 int sqr(int val);
 
 int main()
