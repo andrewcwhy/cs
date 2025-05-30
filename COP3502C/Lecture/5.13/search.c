@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 // Function prototypes
 int binarySearch(int array[], int length, int searchValue);
 int linearSearch(int array[], int length, int searchValue);

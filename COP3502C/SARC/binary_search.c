@@ -50,7 +50,6 @@ int binary_search(const int array[], int length, int target)
         }
         else
         {
-            if (middle == 0) break;
             right = middle - 1;
         }
     }

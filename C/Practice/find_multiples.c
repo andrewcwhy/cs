@@ -7,7 +7,7 @@ int main()
     int array[] = {10, 6, 4, 5, 20};
     size_t length = sizeof(array) / sizeof(array[0]);
 
-    int target = 0;
+    int target = 2;
 
     if (target == 0) {
         printf("Target cannot be zero.\n");
