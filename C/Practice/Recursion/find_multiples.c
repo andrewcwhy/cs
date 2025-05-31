@@ -2,7 +2,7 @@
 
 int find_multiples(const int arr[], int start, int end, int target);
 
-int main()
+int main(void)
 {
     // `arr[]` is internally a pointer
     int arr[] = {10, 6, 4, 5, 20};

@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-void e1();
-void e2();
+void e1(void);
+void e2(void);
 
 int main(void)
 {
@@ -11,7 +11,7 @@ int main(void)
     return 0;
 }
 
-void e1()
+void e1(void)
 {
     int var = 5;
 
@@ -33,7 +33,7 @@ void e1()
     printf("ptr2 (=&ptr1) = %p\n", ptr2);
 }
 
-void e2()
+void e2(void)
 {
     int var = 5;
     // Holds the address of var

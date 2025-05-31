@@ -12,7 +12,6 @@ void display_coordinate(const struct Coordinate coordinate);
 
 int main(void)
 {
-
     // Using new_coordinate() and display_coordinate()
 
     struct Coordinate coordinate1 = new_coordinate(9, 7, 5);
