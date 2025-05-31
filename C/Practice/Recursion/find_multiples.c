@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-int find_multiples(const int array[], int start, int end, int target);
+int find_multiples(const int arr[], int start, int end, int target);
 
 int main()
 {
-    int array[] = {10, 6, 4, 5, 20};
-    size_t length = sizeof(array) / sizeof(array[0]);
+    // `arr[]` is internally a pointer
+    int arr[] = {10, 6, 4, 5, 20};
+    size_t length = sizeof(arr) / sizeof(arr[0]);
 
     int target = 2;
 
@@ -14,7 +15,8 @@ int main()
         return 1;
     }
 
-    int matched = find_multiples(array, 0, length - 1, target);
+    int matched = find_multiples(arr, 0, length - 1, target);
+    
     if (matched > 0)
     {
         printf("There are %d multiple(s) of %d.\n", matched, target);
@@ -27,11 +29,11 @@ int main()
     return 0;
 }
 
-int find_multiples(const int array[], int start, int end, int target)
+int find_multiples(const int arr[], int start, int end, int target)
 {
     int count = 0;
 
-    if (array[start] % target == 0)
+    if (arr[start] % target == 0)
     {
         count++;
     }
@@ -41,5 +43,5 @@ int find_multiples(const int array[], int start, int end, int target)
         return count;
     }
 
-    return count + find_multiples(array, start + 1, end, target);
+    return count + find_multiples(arr, start + 1, end, target);
 }
