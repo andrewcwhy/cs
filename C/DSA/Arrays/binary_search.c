@@ -9,15 +9,15 @@ int main(void)
     size_t len = sizeof(arr) / sizeof(arr[0]);
     int target = 5;
 
-    int index = binary_search(arr, len, target);
+    int idx = binary_search(arr, len, target);
 
-    if (index != -1)
+    if (idx != -1)
     {
-        printf("Target %d found at index %d.\n", target, index);
+        printf("Element %d found at index %d.\n", target, idx);
     }
     else
     {
-        printf("Target %d not found.\n", target);
+        printf("Element %d not found.\n", target);
     }
 
     return 0;
@@ -43,7 +43,7 @@ int binary_search(const int arr[], size_t len, int target)
     while (left <= right)
     {
         /** 0+6/2 = 3 is the first index to check if the middle value (4) is equal to the target value 2 */
-        int mid = (left + right) / 2;
+        int mid = left + (right - left) / 2;
 
         if (arr[mid] == target)
         {

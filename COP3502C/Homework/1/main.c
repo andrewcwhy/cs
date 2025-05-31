@@ -12,27 +12,27 @@ typedef struct Student
     char last_name[MAX_NAME_LENGTH + 1];
 } student_t;
 
-void get_filename(const char *filename);
 int read_file(const char *filename);
 void display_student_info(student_t student);
-int binary_search(const int array[], int length, int target);
+int binary_search(int array[], size_t len, int target);
 
 int main(void)
 {
     char filename[MAX_FILENAME_LENGTH + 1];
     int search_student_id;
-    int index;
 
-    get_filename(filename);
+    printf("Enter the filename to process: ");
+    scanf("%30s", filename);
 
     printf("Enter student ID to search for: ");
     scanf("%d", &search_student_id);
 
-    if () {
-        printf("");
-        return 1;
-    } else {
-        return 0l
+    if ()
+    {
+        display_student_info(students[];)
+    }
+    else
+    {
     }
 
     printf("Exiting program.\n");
@@ -61,12 +61,6 @@ int read_file(const char *filename)
     fclose(file);
 }
 
-void get_filename(char *filename)
-{
-    printf("Enter the filename to process: ");
-    scanf("%30s", filename);
-}
-
 void display_student_info(student_t student)
 {
     printf("-----Student Information-----\n");
@@ -75,26 +69,26 @@ void display_student_info(student_t student)
     printf("GPA: %.2f\n", student.gpa);
 }
 
-int binary_search(const int array[], int length, int target)
+int binary_search(int arr[], size_t len, int target)
 {
     int left = 0;
-    int right = length - 1;
+    int right = len - 1;
 
     while (left <= right)
     {
-        int middle = (left + right) / 2;
+        int mid = left + (right - left) / 2;
 
-        if (array[middle] == target)
+        if (arr[mid] == target)
         {
-            return middle;
+            return mid;
         }
-        else if (array[middle] < target)
+        else if (arr[mid] < target)
         {
-            left = middle + 1;
+            left = mid + 1;
         }
         else
         {
-            right = middle = 1;
+            right = mid = 1;
         }
     }
 
