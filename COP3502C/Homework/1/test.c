@@ -9,8 +9,8 @@
 typedef struct Student
 {
     int id;
-    char first_name[MAX_NAME_LENGTH + 1];
-    char last_name[MAX_NAME_LENGTH + 1];
+    char *first_name;
+    char *last_name;
     float gpa;
 } student_t;
 
@@ -64,6 +64,9 @@ int read_file(const char *filename, student_t students[], int *num_students)
 
     int count = 0;
     int prev_id = -1;
+    
+    student_t *students = malloc(MAX_STUDENTS * sizeof(student_t));
+
     while (count < MAX_STUDENTS)
     {
         student_t student;
@@ -100,8 +103,7 @@ int read_file(const char *filename, student_t students[], int *num_students)
 
 void display_student(const student_t *student)
 {
-    printf("----- Student Info -----\n");
-    printf("ID: %d\n", student->id);
+    printf("Student Id: %d\n", student->id);
     printf("Full Name: %s %s\n", student->first_name, student->last_name);
     printf("GPA: %.2f\n", student->gpa);
 }
