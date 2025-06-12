@@ -42,7 +42,7 @@ void e2(void)
     *x = 6;
     // Holds the address of x
     int **y = &x;
-    // Holds the address of y.c
+    // Holds the address of y
     int ***z = &y;
 
     printf("Dereferencing:\n");

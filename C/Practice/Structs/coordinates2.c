@@ -17,6 +17,7 @@ int main(void)
     coord_t c2 = new_coord("c2", 40, 50);
     coord_t c3 = new_coord("c3", 70, 90);
 
+    
     display_coord(c1);
     display_coord(c2);
     display_coord(c3);

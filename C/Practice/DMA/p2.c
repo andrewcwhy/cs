@@ -42,3 +42,7 @@ point_t *create_point(int x, int y)
     (*p).y = y;
     return p;
 }
+
+void display_point(const point_t point) {
+    
+}

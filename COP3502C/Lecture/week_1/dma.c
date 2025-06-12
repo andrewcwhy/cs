@@ -3,12 +3,11 @@
 int main()
 {
     int entryCount;
+    int input;
+    int measurements[entryCount];
 
     printf("Enter the next measurement: ");
     scanf("%d", &entryCount);
-
-    int measurements[entryCount];
-    int input;
 
     for (int i = 0; i < entryCount; i++)
     {
@@ -17,4 +16,6 @@ int main()
 
         measurements[i] = input;
     }
+
+    return 0;
 }

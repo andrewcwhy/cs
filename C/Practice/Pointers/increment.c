@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 
+// Function declaration
 void increment(int *ptr);
 
 // Calling function

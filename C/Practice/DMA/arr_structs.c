@@ -12,7 +12,7 @@ typedef struct Point
 } point_t;
 
 void set_desc(point_t *p, const char *src);
-point_t create_point(int x, int y,  int z, const char *src);
+point_t create_point(int x, int y, int z, const char *src);
 void display_point(const point_t *point);
 void free_point(point_t *p, int len);
 
