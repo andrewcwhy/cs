@@ -1,5 +1,7 @@
 # Build output
 .zig-out
+*.exe
+*.pdb
 
 # Caches
 .zig-cache
@@ -7,10 +9,6 @@
 # Code Coverage
 coverage
 *.lcov
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 
 # Finder (MacOS) folder config
 .DS_Store
