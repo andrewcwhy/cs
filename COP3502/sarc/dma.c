@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-typedef struct {
-    int aisle_number;
-    int items_number;
-} Aisle;
+typedef struct aisle{
+    int number;
+    int items;
+} aisle_t;
 
-typedef struct {
+typedef struct item {
     char *name;
     double price;
-} Item;
+} item_t;
 
 int main()
 {

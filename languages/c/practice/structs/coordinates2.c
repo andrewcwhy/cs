@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Coordinate
+typedef struct coordinate
 {
     const char *name;
     int x;

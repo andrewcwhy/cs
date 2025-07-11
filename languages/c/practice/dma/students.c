@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Employee
+typedef struct employee
 {
     char *first;
     char *last;

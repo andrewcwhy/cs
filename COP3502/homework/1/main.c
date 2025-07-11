@@ -6,7 +6,7 @@
 #define MAX_NAME_LENGTH 20
 #define MAX_STUDENTS 100
 
-typedef struct Student
+typedef struct student
 {
     int id;
     char first_name[MAX_NAME_LENGTH + 1];

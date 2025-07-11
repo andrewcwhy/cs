@@ -3,13 +3,13 @@
 
 // Create a gradebook array of three students, and initialize it.
 
-typedef struct Student
+typedef struct student
 {
     int id;
     test_score_t *scores;
 } student_t;
 
-typedef struct TestScore
+typedef struct test_score
 {
     int grade;
     char letter_grade;

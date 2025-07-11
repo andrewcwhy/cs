@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "utils/iter/inter.h"
+#include "utils/inter.h"
 
 node_t *ins_start(node_t *head, int new_data);
 void ins_end(node_t *head, int new_data);

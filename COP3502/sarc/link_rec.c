@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node
+typedef struct node
 {
     int data;
-    struct Node *next;
+    struct node *next;
 } node_t;
 
 int count_nodes(node_t *head);

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "utils/iter/inter.h"
+#include "utils/inter.h"
 
 int main(void)
 {

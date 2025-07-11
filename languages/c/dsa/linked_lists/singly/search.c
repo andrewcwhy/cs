@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include "utils/iter/inter.h"
+#include "utils/inter.h"
 
 bool search_iter(node_t *head, int target);
 bool search_rec(node_t *head, int target);

@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node
+typedef struct node
 {
     int data;
     node_t *next;
 } node_t;
 
-typedef struct LL
+typedef struct ll
 {
     node_t *head;
 } ll_t;

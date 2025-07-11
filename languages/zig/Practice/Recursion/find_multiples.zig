@@ -2,7 +2,7 @@ const std = @import("std");
 const print = std.debug.print;
 
 pub fn main() !void {
-    const arr = [_]i32{ 10, 6, 5, 6, 20 };
+    const arr = [_]i32{ -10, 6, 5, 6, 20 };
     const length: usize = arr.len;
 
     const target: i32 = -5;

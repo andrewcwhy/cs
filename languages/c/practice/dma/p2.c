@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Point
+typedef struct point
 {
     int x;
     int y;
@@ -43,6 +43,6 @@ point_t *create_point(int x, int y)
     return p;
 }
 
-void display_point(const point_t point) {
-    
+void display_point(const point_t point)
+{
 }
