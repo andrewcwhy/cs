@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "utils.h": "c",
-        "stdbool.h": "c",
-        "stdlib.h": "c",
-        "inter.h": "c",
-        "cstdlib": "c"
-    }
-}

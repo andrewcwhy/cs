@@ -1,21 +1,15 @@
-# Build output
-.zig-out
+# Binaries
 *.exe
 *.pdb
 
-# Caches
-.zig-cache
+# C build artifacts
+*.o                 # object files
+*.obj               # Windows object files
+*.out               # generic executables
 
-# Code Coverage
-coverage
-*.lcov
+# Rust
+target/
 
-# Finder (MacOS) folder config
-.DS_Store
-
-# IntelliJ based IDEs
-.idea
-
-# Logs
-logs
-*.log
+# Zig
+.zig-cache/
+.zig-out/

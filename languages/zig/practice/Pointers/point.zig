@@ -1,7 +1,7 @@
 const std = @import("std");
 const print = std.debug.print;
 
-pub fn main() !void {
+pub fn main() void {
     const p1 = Point{ .x = 10, .y = 20 };
     print("Point p1: ({}, {})\n", .{ p1.x, p1.y });
 
