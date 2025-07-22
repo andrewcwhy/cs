@@ -4,8 +4,8 @@
 typedef struct node
 {
     int data;
-    struct node_t *left;
-    struct node_t *right;
+    struct node *left;
+    struct node *right;
 } node_t;
 
 node_t *create_node(int new_data);
